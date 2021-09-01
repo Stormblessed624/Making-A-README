@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown')
+const generateMarkdown = require('./utils/generateMarkdown');
+const { rejects } = require('assert');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -41,7 +42,7 @@ const questions = [
             // contribution guidelines
         type: 'input',
         name: 'contributions',
-        message: 'What were the contributions to this project:'
+        message: 'Who are the collaborators on this project?'
     },
     {
             // test instructions
@@ -49,13 +50,13 @@ const questions = [
         name: 'testing',
         message: 'What testing was done on this project?'
     },
-    {
-            // license choice from list of options
-        type: 'list',
-        name: 'license',
-        message: 'What license would you like to use?',
-        choices: []
-    },
+    // {
+    //         // license choice from list of options
+    //     type: 'list',
+    //     name: 'license',
+    //     message: 'What license would you like to use?',
+    //     choices: []
+    // },
     {
             // github username
         type: 'input',
@@ -72,10 +73,33 @@ const questions = [
     
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(fileName, data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve({
+                ok: true,
+                message: 'File Created'
+            });
+        })
+    })
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions)
+        .then(questionData => {
+            return generateMarkdown(questionData);
+        })
+        .then(data => {
+            return writeToFile('../README.md', data);
+        })
+
+}
 
 // Function call to initialize app
 init();
