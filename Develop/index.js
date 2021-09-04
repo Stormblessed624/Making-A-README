@@ -10,15 +10,7 @@ const questions = [
             // Project title
         type: 'input',
         name: 'title',
-        message: 'What is your Projects title?',
-        validate: nameInput => {
-            if (nameInput) {
-                return true;
-            } else {
-                console.log('Please enter your project title.');
-                return false;
-            }
-        }
+        message: 'What is your Projects title?'
     },
     {
             // Project description
@@ -30,19 +22,19 @@ const questions = [
             // installation instruction
         type: 'input',
         name: 'installation',
-        message: 'How do you install the application?'
+        message: 'Provide a step-by-step description on how to install the project:'
     },
     {
             // usage information
         type: 'input',
         name: 'usage',
-        message: 'How do you use this application?'
+        message: 'Provide instructions and examples for the use of this project:'
     },
     {
             // contribution guidelines
         type: 'input',
         name: 'contributions',
-        message: 'Who are the collaborators on this project?'
+        message: 'Who are the collaborators on this project? If any, provide their GitHub profiles:'
     },
     {
             // test instructions
@@ -50,13 +42,13 @@ const questions = [
         name: 'testing',
         message: 'What testing was done on this project?'
     },
-    // {
-    //         // license choice from list of options
-    //     type: 'list',
-    //     name: 'license',
-    //     message: 'What license would you like to use?',
-    //     choices: []
-    // },
+    {
+            // license choice from list of options
+        type: 'list',
+        name: 'license',
+        message: 'What license would you like to use?',
+        choices: ['Apache', 'GNU GPLv3', 'MIT', 'No License']
+    },
     {
             // github username
         type: 'input',
