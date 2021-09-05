@@ -43,11 +43,10 @@ const questions = [
         message: 'What testing was done on this project?'
     },
     {
-            // license choice from list of options
-        type: 'list',
-        name: 'license',
-        message: 'What license would you like to use?',
-        choices: ['Apache', 'GNU GPLv3', 'MIT', 'No License']
+            // email address
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
     },
     {
             // github username
@@ -56,10 +55,11 @@ const questions = [
         message: 'What is your github username?'
     },
     {
-            // email address
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address?'
+            // license choice from list of options
+        type: 'list',
+        name: 'license',
+        message: 'What license would you like to use?',
+        choices: ['Apache', 'GNU GPLv3', 'MIT', 'No License']
     }
 ];
     
