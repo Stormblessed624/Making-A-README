@@ -14,8 +14,13 @@ This is an app that will create a well sectioned and styled readme based on the 
 Simply download or clone the repository, install node as well as inquirier through 'npm install'. Then run the program using 'node index'.
 
 ## Usage
-When creating a readme for a project.
-[Sample Video](https://drive.google.com/file/d/1JeHhXCl4rNRjMmjOKGZLi_zLh4Wvk-Pc/view?usp=sharing)
+* When creating a readme for a project.
+* [Sample Video](https://drive.google.com/file/d/1JeHhXCl4rNRjMmjOKGZLi_zLh4Wvk-Pc/view?usp=sharing)
+
+![alt text](assets/images/Sample-readme-code.png)
+
+![alt text](assets/images/Sample-readme.png)
+
 
 ## Contributing
 The intitial template for this project was provided by the class I am taking, written by [Xandromus](https://github.com/Xandromus) and [gchoi2u](https://github.com/gchoi2u). That template was then expanded on by me.
