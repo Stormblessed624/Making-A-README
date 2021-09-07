@@ -18,7 +18,8 @@ When creating a readme for a project.
 [Sample Video](https://drive.google.com/file/d/1JeHhXCl4rNRjMmjOKGZLi_zLh4Wvk-Pc/view?usp=sharing)
 
 ## Contributing
-The intitial template for this project was provided by the class I am taking. That template was then expanded on by me.
+The intitial template for this project was provided by the class I am taking [Xandromus](https://github.com/Xandromus) and [gchoi2u](https://github.com/gchoi2u). That template was then expanded on by me.
+
 
 ## Tests
 No true testing, just a gradual testing constantly throughout the process of creating features.
